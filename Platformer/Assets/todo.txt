@@ -1,0 +1,17 @@
+TODO:
+
+
+
+	Monoprice.com 
+		Pay attention to levels of sensitivity. 
+		Watch for batteries
+		Make sure tablet is compatable with windows 10
+		Clip Studio
+		Update Pyxel Edit
+		Get Copy of Aesprite by compiling https://www.aseprite.org/faq/#if-aseprite-source-code-is-available-how-is-that-you-are-selling-it
+
+
+
+	
+
+use Quire

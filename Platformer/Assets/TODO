@@ -1,0 +1,209 @@
+
+
+
+☐ Twitch
+    ☐ Set up streamlabs
+    ☐ Find solution for not looking at chat often enough
+    ☐ Add keypress overlay
+    Make intro
+    Make outro
+
+
+
+
+☐ Art
+    ☐ World
+        ☐ Replace DarkForest tileset
+        ✔ Thicken Grass ontop of tiles @done(19-03-09 22:18)
+            ✘ Remove pillowshading on DarkForestStone Tiles @cancelled(19-04-23 01:14)
+            ☐ Replace DarkForest tiles
+            ☐ Add platform tiles.
+
+            ☐ The poison seed
+
+        ☐ Create parralax backgrounds
+            ☐ Trees
+            ☐ Mountains
+            ☐ Moon
+   
+
+    ☐ Characters
+        ☐ Player
+            ☐ Thief
+                ✘ Redo animations @cancelled(19-04-22 23:42)
+                ☐ Replace Theif Sprite and animations
+                
+
+        ☐ Player animations
+            ☐ Idle
+            ☐ Walk
+                ☐ Walk Right
+                ☐ Walk Left
+            ☐ Attack
+                ☐ Attack Right Make sure you have a large overhead swing!
+                ☐ Attack Left  Make sure you have a large overhead swing!
+            ☐ Attack2
+            ☐ Jump
+            ☐ Fall
+            ☐ Hurt Stagger
+            ☐ Die
+            ☐ Dash
+
+        ☐ Enemy animations
+            ☐ Idle
+            ☐ Walk Right
+            ☐ Walk Left
+            ☐ Attack
+            ☐ Attack2
+            ☐ Jump
+            ☐ Fall
+            ☐ Hurt Stagger
+            ☐ Die
+
+        ☐ WoodSprite
+            ✔ FIXME: Attack is playing continously @done(19-03-09 22:18)
+            
+
+☐ Code
+    
+    
+    ☐ Traps
+        ☐ Contact Traps Spikes ect
+
+
+    ☐ Player
+        ☐ Refactor to use LineColliders and updated list of what's inside instead of our current overlap box.
+        ☐ Refactor Player into two inherited classes, MeleePlayer and RangedPlayer, move most of Thief's code up to Player
+        ✔ Invulnerability frames @done(19-02-26 15:04)
+            Make invulnerability frames cause player to flash white  and possibly play an animation.
+        Movement
+            FIXME: 
+                ☐ Walking isn't terribly smooth. Fix it.
+                    ☐ //Try single tap to walk and double tap to run
+            ✔ Walk @done(19-02-26 15:02)
+            ✔ Jump @done(19-02-26 15:02)
+        Items
+            ☐ Pickup
+            ☐ Active Use
+
+    Enemy
+        Die: Wait until animation finishes and then keel delete the character.
+        Instances
+            Woodsprite
+                ✔ Attack @done(19-02-27 18:30)
+                ✔ Movement @done(19-02-27 18:31)
+                ✔ Charge player @done(19-02-25 17:36)
+                ☐ Continue charging until the end of the animation or until sprite flips.
+                ✔ Attack @done(19-02-25 17:36)
+                ✔ Hook Attack call to AnimationEvent @done(19-02-25 19:24)
+                ✔ Stop Woodsprite from moving while attacking @done(19-02-27 23:55)
+                ✔ Fix the damn state machine you moron. @done(19-02-27 23:55)
+
+                ☐ FIXME Woodsprite plays death animation twice when attacked while dying.
+
+    ☐ World
+        ✔ World generation script @done(19-04-22 23:45)
+                FIXME:
+                    ✔ PlaceRoom should place a copy from the spawnableRoomsList, not a direct reference @done(19-03-07 18:42)
+                    ✔ WorldGeneration sometimes enters an infinite loop and crashes unity @done(19-03-07 18:42)
+                    ✔ Make sure that any open connection pointing to a room that doesn't meet a connection from the room causes it to be rejected. @done(19-03-28 01:20)
+                    ✔ Make sure a connection doesn't point off map or prevenet the room from being placed there. @done(19-04-22 23:45)
+                    ✔ WorldGeneration sometimes generates disconnected diagonal rooms. @done(19-03-08 18:35)
+                    ✔ Showing the map destroys the placedRoomsList. we need to preserve it. @done(19-03-08 18:35)
+                    ✔ newly placed rooms sometimes have an open connection facing a closed one. @done(19-03-28 01:20)
+                    ✔ RoomConnections.Count sometimes equals zero. @done(19-04-02 16:54)
+                    ✔ CheckValidConnections sometimes returning true when it should return false. @done(19-04-02 18:11)
+                    ✔ Level generator sometimes placing rooms with a open connection facing a preexisting closed connection @done(19-04-02 18:11)
+                    ✔ Level generator has difficulty placing rooms inside small corners it creates @done(19-04-22 23:45)
+
+            
+            ✔ Update connections after placing a room to make sure new connections arn't pointing at filled tiles @done(19-04-22 23:45)
+            ✔ Add connections to ununsed connections. @done(19-02-28 00:18)
+            ✔ PickRoom Returns void. Refactor it so it returns a room. @done(19-04-22 23:46)
+            ✔ Respect placed room connections when placing rooms. @done(19-03-04 19:59)
+            
+            ✔ Respect placement bounding box @done(19-02-28 00:20)
+            ☐ Place Key Rooms
+            ✔ Fill bounding box with  or cap edges with rooms. @done(19-04-22 23:46)
+
+            ✔ Room @done(19-02-28 00:20)
+            
+            ☐ Connection
+                ☐ Have reference to scene collider so we know which connection we hit.
+                    Check to see if any of our connectors point to the origin location of the other connections.
+            
+
+            ☐ Add final pass to cap all connections
+
+            Create map from entire world and display it.
+
+        
+        ☐ Parallax scrolling
+
+
+        ☐ Places
+            ☐ Battlefield
+                ☐ BuzzardKing
+                ☐ Skeleton
+            ☐ Wretched Shore
+            ☐ Soulless Stronghold   Haunted Hold, 
+
+    ☐ UI
+        ☐ HUD
+            ☐ Health Hearts
+            ☐ Equipped Item
+            ☐ Mana bar
+        ☐ Options
+            ☐ Sound
+            ☐ Resolution
+            ☐ Fullscreen
+        ☐ Map
+            ☐ Display map data
+            ☐ Allow scrolling
+            ☐ Hide unvisited rooms
+        
+
+
+
+☐ Unity
+    ☐ Set up persistent scene
+
+
+
+
+    
+
+
+Design
+    Zones
+        Dark Wood
+            World
+                Thorn Bushes
+                Pitcher Plant
+                    Pours acid when attacked
+                Fairy Nest
+                    Spawns fairies when struck
+            Enemies
+                WoodSprite
+                    Charges players
+                Carnivorous plant. 
+                    Lashes out when it's trigger hairs are ticked.
+
+        Battlefield
+            Buzzard King
+            Skeleton
+
+                
+
+
+☐ Tools: Textmesh pro
+☐ Tiled
+☐ Aesprite
+☐ Fix Visual Studio
+☐ Clip Studio
+☐ Git
+    ☐ Github tracker
+    ☐ Github project boards
+        ✘ Don't use repo @cancelled(19-03-06 22:40)
+
+        480x270   multiplied by 4 gives 1080p
